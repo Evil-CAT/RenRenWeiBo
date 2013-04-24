@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".AddAccountActivity" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="To Add"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/button_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/btn_cancel" />
+
+    <Button
+        android:id="@+id/button_renren"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button_sina"
+        android:layout_alignRight="@+id/button_sina"
+        android:layout_below="@+id/button_sina"
+        android:layout_marginTop="17dp"
+        android:text="@string/btn_add_renren" />
+
+    <RadioButton
+        android:id="@+id/radiobtn_sina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/button_tencent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="64dp"
+        android:text="@string/btn_add_sina" />
+
+    <Button
+        android:id="@+id/button_sina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/radiobtn_sina"
+        android:layout_below="@+id/textView1"
+        android:text="@string/btn_add_sina" />
+
+    <Button
+        android:id="@+id/button_tencent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button_renren"
+        android:layout_alignRight="@+id/button_renren"
+        android:layout_below="@+id/button_renren"
+        android:layout_marginTop="20dp"
+        android:text="@string/btn_add_tencent" />
+
+    <RadioButton
+        android:id="@+id/radiobtn_renren"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/radiobtn_sina"
+        android:layout_below="@+id/radiobtn_sina"
+        android:text="@string/btn_add_renren" />
+
+    <RadioButton
+        android:id="@+id/radiobtn_tencent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/radiobtn_renren"
+        android:layout_below="@+id/radiobtn_renren"
+        android:text="@string/btn_add_tencent" />
+
+    <Button
+        android:id="@+id/button_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radiobtn_tencent"
+        android:layout_centerHorizontal="true"
+        android:text="@string/btn_ok" />
+
+</RelativeLayout>
