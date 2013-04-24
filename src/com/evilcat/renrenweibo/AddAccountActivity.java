@@ -2,21 +2,28 @@ package com.evilcat.renrenweibo;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
+import android.widget.RadioGroup;
+import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.Toast;
 
 public class AddAccountActivity extends Activity {
 
 	public String TAG = "RenRenWeiBo";
 	
-	public static int act_num = 0;     //account number, 0 to start.
-	private Button btn_renren;
-	private Button btn_sina;
-	private Button btn_tencent;
+//	public int acont_flag = 0;     		//account flag, 0 to start. 
+										//1 for renren, 2 for sina, 3 for tencent.
+	
+	public static int acont_num = 0;		//account number, 0 to start.
+	private RadioGroup group_add;
+//	private RadioButton btn_renren;
+//	private RadioButton btn_sina;
+//	private RadioButton btn_tencent;
+	private Button btn_ok;
 	private Button btn_cancel;
 	
 	@Override
@@ -24,11 +31,20 @@ public class AddAccountActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.add_account);
 		
-		btn_renren = (Button) findViewById(R.id.button_renren);
-		btn_sina = (Button) findViewById(R.id.button_sina);
-		btn_tencent = (Button) findViewById(R.id.button_tencent);
+		group_add = (RadioGroup) findViewById(R.id.radioGroup);
+		btn_ok = (Button) findViewById(R.id.button_ok);
 		btn_cancel = (Button) findViewById(R.id.button_cancel);
 		
+		group_add.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+			
+			@Override
+			public void onCheckedChanged(RadioGroup group, int checkedId) {
+				// TODO Auto-generated method stub
+				int radioButtonId = group.getCheckedRadioButtonId();
+				Log.d(TAG, "selected radiobutton id is : " + radioButtonId);
+			}
+		});
+/*		
 		btn_renren.setOnClickListener(new Button.OnClickListener(){
 
 			@Override
@@ -36,6 +52,7 @@ public class AddAccountActivity extends Activity {
 				// TODO Auto-generated method stub
 				Toast.makeText(getApplicationContext(), "Btn renren clicked",
 					     Toast.LENGTH_SHORT).show();
+				acont_flag = 1;
 			}
 		});
 		
@@ -46,7 +63,7 @@ public class AddAccountActivity extends Activity {
 				// TODO Auto-generated method stub
 				Toast.makeText(getApplicationContext(), "Btn sina clicked",
 					     Toast.LENGTH_SHORT).show();
-				
+				acont_flag = 2;
 			}
 		});
 		
@@ -57,6 +74,28 @@ public class AddAccountActivity extends Activity {
 				// TODO Auto-generated method stub
 				Toast.makeText(getApplicationContext(), "Btn tencent clicked",
 					     Toast.LENGTH_SHORT).show();
+				acont_flag = 3;
+			}
+		});
+*/
+		btn_ok.setOnClickListener(new Button.OnClickListener(){
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Toast.makeText(getApplicationContext(), "Btn ok clicked",
+					     Toast.LENGTH_SHORT).show();
+//				Log.d(TAG,"====account flag = " + acont_flag);
+				switch(v.getId()){
+					case R.id.radiobtn_renren:
+						Log.d(TAG, "radio button renren");break;
+					case R.id.radiobtn_sina:
+						Log.d(TAG, "radio button sina");break;
+					case R.id.radiobtn_tencent:
+						Log.d(TAG, "radio button tencent");break;
+				}
+				Intent intent = new Intent(AddAccountActivity.this, NewAccountActivity.class);
+				startActivity(intent);
 			}
 		});
 		
@@ -65,7 +104,8 @@ public class AddAccountActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				setContentView(R.layout.activity_main);
+				Intent intent = new Intent(AddAccountActivity.this, MainActivity.class);
+				startActivity(intent);
 			}
 		});		
 	}

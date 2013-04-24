@@ -24,6 +24,7 @@
         </activity>
         <activity android:name="AddAccountActivity"></activity>
         <activity android:name="AccountListActivity"></activity>
+        <activity android:name="NewAccountActivity"></activity>
     </application>
 
 </manifest>

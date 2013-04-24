@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,7 +31,6 @@ public class MainActivity extends Activity {
 	private Button btn_add;
 	private Button btn_about;
 	private Button btn_exit;
-	private Button btn_back;
 	private Button btn_accountlist;
 	
 	private int exitcnt = 0;
@@ -46,7 +44,6 @@ public class MainActivity extends Activity {
 		btn_add = (Button) findViewById(R.id.button_add);
 		btn_about = (Button) findViewById(R.id.button_about);
 		btn_exit = (Button) findViewById(R.id.button_exit);
-		btn_back = (Button) findViewById(R.id.button_cancel);
 		btn_accountlist = (Button) findViewById(R.id.button_accountlist);
 		
 		btn_add.setOnClickListener(new Button.OnClickListener(){
@@ -85,17 +82,6 @@ public class MainActivity extends Activity {
 								.setPositiveButton("OK", null)
 								.setMessage(Message)
 								.show();
-			}
-		});
-		
-		btn_back.setOnClickListener(new Button.OnClickListener(){
-
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				Toast.makeText(getApplicationContext(), "Btn back clicked",
-					     Toast.LENGTH_SHORT).show();
-				setContentView(R.layout.activity_main);
 			}
 		});
 		
