@@ -8,6 +8,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,6 +24,7 @@ public class NewAccountActivity extends Activity {
 	private Button btn_cancel;
 	private TextView mTextView1;
 	private TextView mTextView2;
+	private CheckBox mCheckBox;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,7 @@ public class NewAccountActivity extends Activity {
 		btn_cancel = (Button) findViewById(R.id.button_cancel);
 		mTextView1 = (TextView) findViewById(R.id.textView1);
 		mTextView2 = (TextView) findViewById(R.id.textView2);
+		mCheckBox = (CheckBox) findViewById(R.id.checkbox);
 		
 		name.setOnEditorActionListener(new OnEditorActionListener() {
 			
@@ -80,6 +83,7 @@ public class NewAccountActivity extends Activity {
 				// TODO Auto-generated method stub
 				Intent intent = new Intent(NewAccountActivity.this, AddAccountActivity.class);
 				startActivity(intent);
+				finish();
 			}
 		});
 	}

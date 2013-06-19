@@ -2,6 +2,7 @@ package com.evilcat.renrenweibo;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -22,7 +23,7 @@ public class AccountListActivity extends Activity {
 		
 		show_no_account = (TextView) findViewById(R.id.textView1);
 		to_add_account = (TextView) findViewById(R.id.textView2);
-		
+		to_add_account.getPaint().setFlags(Paint.UNDERLINE_TEXT_FLAG);
 		to_add_account.setOnClickListener(new OnClickListener() {
 			
 			@Override

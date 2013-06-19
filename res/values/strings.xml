@@ -15,5 +15,8 @@
     <string name="txt_no_account">There is No Account</string>
     <string name="btn_ok">OK</string>
     <string name="btn_cancel">Cancel</string>
+    <string name="auth_string">请登录</string>
+    <string name="auth_success">登陆成功</string>
+    <string name="auth_failed">登陆失败</string>
 
 </resources>

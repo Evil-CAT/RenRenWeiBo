@@ -1,6 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
+    android:layout_height="fill_parent" 
+    android:background="@drawable/main">
 
     <EditText
         android:id="@+id/edit_passwd"
@@ -63,8 +64,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/checkbox"
-        android:layout_marginBottom="42dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginRight="40dp"
         android:text="@string/btn_cancel" />
 
     <Button
@@ -73,7 +75,8 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/button_cancel"
         android:layout_alignBottom="@+id/button_cancel"
-        android:layout_toLeftOf="@+id/button_cancel"
+        android:layout_alignRight="@+id/textView1"
+        android:layout_marginRight="18dp"
         android:text="@string/btn_ok" />
 
 </RelativeLayout>

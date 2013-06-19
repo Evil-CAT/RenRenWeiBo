@@ -1,68 +1,55 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/LinearLayout1"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:visibility="visible"
-    tools:context=".MainActivity" >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/main" >
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="visible" >
+    <Button
+        android:id="@+id/button_about"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/btn_about" />
 
-        <Button
-            android:id="@+id/button_add"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textView1"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="21dp"
-            android:text="@string/btn_add" />
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/txt_welcome"
+        android:textSize="20sp" />
 
-        <Button
-            android:id="@+id/button_exit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/button_about"
-            android:layout_alignParentBottom="true"
-            android:layout_alignRight="@+id/button_add"
-            android:text="@string/btn_exit" />
+    <Button
+        android:id="@+id/button_accountlist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button_about"
+        android:layout_centerHorizontal="true"
+        android:text="@string/btn_account" />
 
-        <Button
-            android:id="@+id/button_accountlist"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/button_about"
-            android:layout_alignRight="@+id/button_add"
-            android:layout_below="@+id/button_add"
-            android:layout_marginTop="14dp"
-            android:text="@string/btn_account" />
+    <ImageButton
+        android:id="@+id/btn_renren"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/renren_logo" />
 
-        <Button
-            android:id="@+id/button_about"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/button_exit"
-            android:layout_alignLeft="@+id/button_add"
-            android:layout_alignRight="@+id/button_add"
-            android:layout_marginBottom="36dp"
-            android:text="@string/btn_about" />
+    <ImageButton
+        android:id="@+id/btn_sina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btn_renren"
+        android:layout_below="@+id/btn_renren"
+        android:src="@drawable/sina_logo" />
 
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:text="@string/txt_welcome" />
+    <ImageButton
+        android:id="@+id/btn_tencent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btn_sina"
+        android:layout_below="@+id/btn_sina"
+        android:src="@drawable/tencent_logo" />
 
-    </RelativeLayout>
-
-</LinearLayout>
+</RelativeLayout>
